@@ -1,0 +1,15 @@
+[package]
+name = "esp32-s3-rust-nolib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+esp32s3-hal = { version = "0.9.0", features = ["xtal-40mhz", "esp32s3"] }
+esp-backtrace = { version = "0.6.0", features = ["esp32s3", "panic-handler", "exception-handler"] }
+esp-println = { version = "0.4.0", features = ["esp32s3"] }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
