@@ -1,0 +1,21 @@
+{
+	"name": "esp32-s3-rust-nolib",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"--privileged",
+		"-v",
+		"/dev/ttyUSB0:/dev/ttyUSB0"
+	],
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+		"rust-lang.rust-analyzer",
+		"tamasfe.even-better-toml",
+		"serayuzgur.crates"
+	],
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+	"workspaceFolder": "/workspace"
+}
